@@ -4,6 +4,10 @@
 
 This repository demonstrates how to write and deploy a simple Google Cloud Function (Firebase Function) accompanied by an OpenAPI description. The primary functionality of this function is to process text and return a URL after performing specific actions. It's designed to serve as an example of how such functions can be utilized as Actions in Custom GPTs.
 
+Full video tutorial using this code to create a custom GPT with actions and knowledge:
+[![How to make GPTs with Actions and Knowledge | D&D Homebrew GPT](https://img.youtube.com/vi/m2lJqHix-9I/0.jpg)](https://youtu.be/m2lJqHix-9I)
+
+
 ## Functionality
 
 The `index.js` file contains 2 Cloud Functions. One is named `createHomebrew`. This function:
