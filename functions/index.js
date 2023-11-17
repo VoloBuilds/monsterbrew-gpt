@@ -1,6 +1,7 @@
 const functions = require('firebase-functions');
 const puppeteer = require('puppeteer-core');
 const chrome = require('chrome-aws-lambda');
+const fs = require('fs');
 
 const runtimeOpts = {
     timeoutSeconds: 300,
@@ -55,3 +56,15 @@ async function processTextAndGetUrl(text) {
     await browser.close();
     return newUrl;
 }
+
+exports.privacyPolicy = functions.https.onRequest((request, response) => {
+    const filePath = './privacyPolicy.txt'
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading the privacy policy file:', err);
+            response.status(500).send('Error loading the privacy policy');
+            return;
+        }
+        response.send(data);
+    });
+});

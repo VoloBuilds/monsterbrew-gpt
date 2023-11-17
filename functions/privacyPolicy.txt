@@ -1,0 +1,25 @@
+Privacy Policy
+
+Effective Date: Nov 11, 2023
+
+This Privacy Policy applies to Monsterbrew GPT ("we," "us," or "our") and explains our practices regarding the collection, use, and disclosure of information that we receive when you use our GPT.
+
+1. Information Collection and Use
+
+We firmly believe in the importance of your privacy and are committed to creating a safe and secure environment for all our users. Hence, we do not collect, store, or use any personal data from our users. This includes, but is not limited to, personal identifiers, contact information, demographic details, financial data, and any other type of data that could be used to identify or contact you.
+
+2. Non-collection of Sensitive Information
+
+We do not collect sensitive personal information such as health-related data, political opinions, religious or philosophical beliefs, or any other categories of sensitive information.
+
+3. Data Security
+
+As we do not collect any personal data, there is no risk of such data being accessed, used, or disclosed by any third parties.
+
+4. Changes to This Privacy Policy
+
+This Privacy Policy may be updated from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.
+
+5. Contact Us
+
+If you have any questions about this Privacy Policy, please contact us at https://github.com/VoloBuilds.

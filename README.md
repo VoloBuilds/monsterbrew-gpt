@@ -6,11 +6,13 @@ This repository demonstrates how to write and deploy a simple Google Cloud Funct
 
 ## Functionality
 
-The `index.js` file contains a single Cloud Function named `createHomebrew`. This function:
+The `index.js` file contains 2 Cloud Functions. One is named `createHomebrew`. This function:
 
 1. **Validates the Request**: It ensures that the incoming request is a POST method and checks for the presence of required content in the request body.
 2. **Processes the Text**: The function then uses Puppeteer to automate browser actions. It navigates to a specific website, inputs the received text, and performs certain actions to generate a URL.
 3. **Responds with a URL**: Finally, the function returns this URL as a response to the initial request.
+
+The other function, `privacyPolicy`, serves a static .txt file that you can use in your GPT.
 
 ## Prerequisites
 
@@ -24,6 +26,8 @@ Before deploying this function, ensure you have the following:
 
 1. **Install Dependencies**: Run `npm install` in the project directory to install required packages (`firebase-functions`, `puppeteer-core`, `chrome-aws-lambda`).
 2. **Deploy to Firebase**: Use the command `firebase deploy --only functions` to deploy the function to your Firebase project.
+3. **Make Privacy Policy public**: If you are creating a public GPT, you will need a public privacy policy. To remove the auth from this endpoint, you can run the following command:
+`gcloud functions add-iam-policy-binding privacyPolicy --member="allUsers" --role="roles/cloudfunctions.invoker"`
 
 ## OpenAPI Description
 
