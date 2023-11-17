@@ -1,0 +1,78 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Homebrewery API",
+      "version": "1.0.0",
+      "description": "An API to process text and return a URL from the Homebrewery site using Puppeteer."
+    },
+    "servers": [
+      {
+        "url": "https://us-central1-dragonroll-1.cloudfunctions.net/"
+      }
+    ],
+    "paths": {
+      "/createHomebrew": {
+        "post": {
+          "operationId": "createHomebrew",
+          "summary": "Process text and return a new URL",
+          "description": "Takes text as input, processes it using Puppeteer, and returns the resulting URL.",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "content": {
+                      "type": "string",
+                      "description": "The text to be processed."
+                    }
+                  },
+                  "required": [
+                    "content"
+                  ]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Successfully processed the text and returned the URL.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "url": {
+                        "type": "string",
+                        "description": "The resulting URL after processing."
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad request, usually due to missing content in the request."
+            },
+            "500": {
+              "description": "Internal server error, indicating a problem with the server or the script."
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "ErrorResponse": {
+          "type": "object",
+          "properties": {
+            "error": {
+              "type": "string",
+              "description": "Description of the error."
+            }
+          }
+        }
+      }
+    }
+  }
